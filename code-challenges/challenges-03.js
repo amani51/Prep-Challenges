@@ -55,8 +55,10 @@ const objLit = (obj) => {
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  for (const key in obj) {
-
+  let results=[];
+  for (const [key, value] of Object.entries(obj)) {
+ results.push(`Customer Name :${key} , Age :${value}`)
+ return results 
 }
 };
 // -------------------------------------------------------------------------------------------------------
